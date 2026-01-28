@@ -1,0 +1,789 @@
+
+#영임쌤 깃허브 접속 
+https://github.com/posasi2000/dongaAI
+★-------------------------------------------------------------------
+작업폴더
+dongaAI 작업폴더
+ ㄴday0116 vsCode편집기 File메뉴 => Open Folder
+   ㄴ New File선택해서  01list.py문서 생성 
+     실행할때 C:\~~~> py 01list.py
+	
+
+# 1월19일 월요일 파이썬 코딩도장 486페이지 예외처리 
+# 1월19일 월요일 파이썬 코딩도장 143페이지, 313페이지 딕셔너리  
+# 1월19일 월요일 파이썬 코딩도장 함수  unit29 ~ unit31  372페이지 ~ 404페이지 
+
+ 출력print()  & 변수 & 연산처리 & if비교 & 데이터입력 input()
+ casting함수  int(), str(), float(), bool()
+ 제어 if,  반복문 for/while 
+ list,예외처리 
+
+
+https://docs.python.org/ko/3.14/tutorial/datastructures.html#dictionaries
+
+# 변환함수  int(), str(), float(), bool(), list(), tuple(), dict()딕셔너리
+# 1월19일 월요일 dict, 함수def  game(): 처리 
+# 파이썬 코딩도장  unit29 ~ unit31  372페이지 ~ 404페이지 
+
+
+# 파이썬 코딩도장 486페이지 예외처리 
+# 파이썬 코딩도장 143페이지, 313페이지 딕셔너리  
+#파이썬 코딩도장 313페이지  딕셔너리 응용은 1월19일 월요일 
+lux={ year키:2026value, month키:1value, day키:16value } 
+
+# 파이썬 코딩도장 143페이지 ~ 150페이지  2시50분까지 정리 
+
+# 파이썬 응용, 알고리즘 시작할수 있는 중첩반복문 
+  for~: 
+   while: ~  
+ # for{for{}} while{for{}}
+
+# 파이썬언어로  개발시작  함수 이해 활용
+
+ 
+
+★---------------------------------------------------------------------------------
+출력print()  & 변수 & 연산처리 & if비교 & 데이터입력 input()
+casting함수  int(), str(), float(), bool()
+
+kor = 90숫자타입  국어영어수학  총점 평균 합격여부
+print('국어=' , kor)
+print('국어=90')  #출력전용
+print('국어=',90) #출력전용
+
+반복처리는 1회처리 극복 for/while,  반복탈출/조건으로 재반복continue
+for k in range(5시작,16종료-1,2증감):
+   들여쓰기~~~~
+
+while True:
+  들여쓰기~~~~
+  if 조건절 :
+      들여쓰기 break
+
+
+여러건 데이터 처리할때 유용한 복합데이터 list리스트[], dict딕셔너리{키:value}
+리스트는 중복가능, 입력한순서 유지, 숫자일때 sort() 등록/삭제/수정/조회  
+
+name = 'lee', kor = 90 eng = 35 com = 70 mat = 60 sql = 80
+subject = ['lee', 90,35,70,60,80 ]
+ 
+subject[2] = 100 #35점수대신 100수정
+subject.append(3400)
+
+subject[4:6] = [] 삭제
+del  subject[4:6]  삭제
+subject.pop()  맨끝삭제
+subject.pop(3) 3번째 데이터삭제
+print( subject[1:6] )
+print( subject[1:] ) #1번째 끝까지 추출
+
+데이터등록, 데이터출력/검색해서출력, 데이터 수정/편집, 데이터삭제
+CRUD = crud = create등록,  read전체부분검색,  update수정편집, delete삭제 
+
+문자열은 정보안내 메세지 jumin[3:7]추출 len(jumin)    join() split()
+일반적인 문자열은  여러분의 이름, 여러분집주소,  여러분의 email, 여러분의주민등록번호
+message = '안내문~~~~~'
+title = '내용의 축약설명'
+name = '내이름이나 받는이름'
+message = '메~~~~~~~~~~~'
+
+문자열, 문자, 리스트, 딕트등등 순서접근 0번째부터  lotto[0] jumin[0:2]
+
+★-------------------------------------------------------------------
+# 파이썬 코딩도장 486페이지 예외처리 
+try:  
+   에러가능성이 있는 내용
+   실행할 코드 
+except : 
+   에러발생시 예외처리 안내문출력 
+
+7/5  몫연산 사칙연산
+
+score = [ 90,60,80 ]
+print(score[5])
+
+su = 0
+su = int(input('정수를 입력하세요')) 3.4입력하거나 kim문자
+print(su)
+
+print('green 수행~~')
+print('blue 수행~~')
+print('yellow 수행~~')
+
+# 파이썬 코딩도장 143페이지, 313페이지 딕셔너리 
+
+import math
+import random
+import time 
+ ㄴ my = time.localtime()
+import datetime  
+ ㄴ dt = datetime.datetime.now()
+
+# 파이썬 코딩도장 교재 307페이지 리스트에서 사용되는 함수=기능=처리
+ㄴ등록, 숫자일때 계산,갯수,순서, 수정/삭제 
+ㄴappend(), insert(), count(), reverse, sort(), clear()모든값을 삭제 
+
+# 파이썬 코딩도장 교재 287페이지 문자열 응용
+
+
+교재 111페이지 시퀀스 자료형 리스트, 튜플, range, 문자열
+교재 117페이지  len(문자열) jumin='9810251823946'
+ㄴ주민번호 앞6자릿수 뒤7자릿수 size = len(jumin)
+ㄴ주민번호 98앞2자릿수  year = jumin[0:2] 
+
+교재 118페이지 순서index가능, 추출 시퀀스 자료형 리스트, 튜플, range, 문자열
+
+파이썬 코딩도장 195페이지는 1월14일 수요일 설명하면 실습진행
+교재 27페이지 파이썬의 특징 간단한문법, 다양한팩키지, 오픈소스무료
+교재 30페이지 파이썬 설치 
+교재 50페이지 print(), 한줄주석, 들여쓰기 if/반복문 들여쓰기 규칙 
+교재 55페이지 연산처리
+교재 60페이지 형변환  float(78)  78.0 float('92') 92
+교재 63페이지 변수선언,초기화, 대입, 역할 dan = 7
+교재 65페이지 변수값 할당 x,y,z = 0,0,0   a = a+20  a += 20
+교재 68페이지 값입력받는 input('안내문')
+교재 70페이지 값입력받는 money = int(input('안내문'))
+교재 84페이지 산술연산자 
+교재 91페이지 논리연산자  and or 샘플] elif (pick==1 and money<300) or (pick==2 and money<250) :
+타입변환=형변환=casting 표현 str(),int(),float(),bool()
+
+교재 96페이지  title='안내문'   title="안내문"  
+""" 여러라인 주석 """
+''' 여러라인 주석 '''
+
+102페이지 리스트 lang=['C', 'html', 'python']  my=['kim', 34, True, 89.2 ]
+105페이지 튜플  pos=('위도', 126.34534, '경도', 37.86546) 추가수정삭제 안되는 작업
+111페이지 시퀀스자료형 문자,리스트, range
+115페이지 갯수len() 문자열갯수, 리스트갯수, 튜플갯수 len(대상)
+118페이지 인덱스위치  data=[38,21,53,62,19]  data[0]  data[1]  data[-1]
+
+143페이지  딕셔너리  = 딕트dict=dictory 생략
+    'naver' : 'http://www.naver.com'
+    key키         값data
+
+156페이지 if제어문 
+if  조건  :
+   조건만족하면 처리
+else :
+   조건불만족시 처리 
+
+166페이지 if 조건 ~ else
+176페이지 if 조건  ~ elif 조건 ~~ else 
+
+185페이지 for반복문
+for 대표변수 in  range(횟수):
+    ~~~~처리
+    ~~~~처리
+
+for k  in 리스트/문자열/튜플:
+for k  in range(1,7): 들여쓰기해서 내용기술
+
+
+★-------------------------------------------------------------------
+unit 44  573페이지 참고 
+파이썬에서 import키워드 라이브러리 추가
+기본내장함수 
+print(),input(),int(),str(),float(),type(),id(),round()
+abs(-345), pow(9,2), len()길이
+
+라이브러리 종류 수학,문자,날짜,시스템,변환
+import math
+import random
+import os
+
+
+파이썬에서 연산
+ㄴ산술연산   +  -  *  /  //  %
+ㄴ비교연산   >  <  ==  !=
+ㄴ논리연산  and  or  not
+ㄴ대입연산  정석 hap = a + hap  축약식 hap += a 
+	   정석 a = a + 1            축약식어색해서 a =+ 1
+	
+
+파이썬에서 반복문 for
+for k in range(7) 0~6까지 총 7개의미
+for k in range(매개인자1개일때 무조건0부터~6까지 갯수7): ~~~
+
+for k in range(1,7) 1~6까지 6개
+for k in range(매개인자1개,2개): 엔터쳐서 들여쓰기후 코드
+
+for k in range(1,7,2) 1~6까지  2씩증가
+for k in range(매개인자1개,2개,3번째는 1씩증가일때생략가능): 엔터쳐서 들여쓰기후 코드
+
+for k in range(10):
+     0,1,2,3,4,5,6,7,8,9
+
+for k in range(1,11):
+    1,2,3,4,5,6,7,8,9,10
+
+for k in range(1,11,2)
+    1,3,5,7,9
+
+
+print()출력
+변수 = input('안내문')
+변수 = int(input('안내문'))
+연산종류  산술, 비교, 논리 
+제어 if
+반복 for, while 
+while 조건:
+   만족하면 처리1
+   만족하면 처리2
+   만족하면 처리3
+
+
+    제어문관련 pdf문서 23페이지까지 확인 
+    제어문 
+      if  조건 : 
+           조건만족시처리 
+     else:
+       불만족시 처리
+
+반복문 for, while 2가지종류가 있습니다
+for반복문설명]
+for k in range(1부터,6최종값-1,1씩증가): 
+    print(k처리)  
+
+while반복문설명
+while True:  
+    print(무한루프반복처리)
+   if 조건절 : break 
+
+파이썬 코딩도장  unit 16
+pdf문서 49페이지
+
+2026-01-09-금요일
+다양하게 출력
+연산 - 비교연산, 논리연산
+if제어문 연습
+
+mindlogic에서 프롬프트 
+
+파이썬 언어 kor,eng,hap,avg,message변수사용 kor변수, eng변수
+데이터는 input()처리 총점,평균 처리후 if제어문으로 avg점수 70점부터 합격 처리 하도록 구현하세요. 
+마지막 데이터 출력
+
+
+
+파이썬언어로 AI응용활용개발설계작업을 위해서 ===>>> 프로그램설치
+파이썬언어로 AI응용활용개발설계작업을 위해서 ===>>> VScode파이썬언어코딩작업 연결
+
+순서1] 우리의 작업폴더 day0109폴더 생성
+순서2] 오늘 1월9일 금요일 수업내용
+ㄴprint()출력, 
+ㄴ키보드에서 데이터입력 변수=input('안내문') 단점은 무조건 문자열로 인식
+ㄴ숫자타입 정수형 27, 실수형 3.1415/ input()받은 데이터는 형변환필요
+ㄴ제어조건 if~else  if단독으로 사용가능, if~elif~else 
+ㄴ변수 왜? 사용할까?
+  첫번째사람 이름 name=input("안내문")  
+  첫번째사람 핸폰 phone=input("안내문")
+
+
+
+
+
+
+
+파이썬 형변환  int(), str(), float()
+파이썬 제어 if~  if~else  if~elif~else
+
+파이썬 변수는 데이터 기억하는 공간 variable 
+파이썬 출력 print()
+파이썬 입력 input()
+
+
+★-------------------------------------------------------------------
+# 파이썬 언어 문법의 주의사항
+1) 화면 print(), 키보드입력 input()  
+2) 파이썬은 들여쓰기 잘해야 합니다 
+3) 파이썬 파일 확장자  test.py 
+4) 파이썬 주석처리 # 한줄주석
+5) 파이썬 문자,문자열   'F'  "coffee"  "F"  'coffee'
+      
+
+윈도우 상태줄 검색입력란 cmd입력
+C:\Users\Donga> python --version
+  Python 3.12.10
+
+C:\Users\Donga>python 
+>>> print('홍길동')
+>>> print('kimyoung')
+>>> print("홍길동")
+>>> print("kimyoung")
+
+>>> print(홍길동)  #에러발생
+>>> print(honggil) #에러발생
+
+# 문자열데이터 ' '  " "  
+# 숫자데이터  78정수  34.56실수
+
+>>> print(2+3)     #숫자데이터
+>>> print("2"+"3") #문자데이터
+
+# True/False
+>>> print(True)
+>>> print(False)
+>>> print(true)   #에러발생
+>>> print(false)  #에러발생
+
+
+실습1] 여러분 안내문 이름,나이 출력  
+>>> print('이름: 홍길동')
+>>> print('나이: 27')
+
+변수에 설명  변하는 데이터값을 기억합니다. (20명 학생 점수데이터 필요합니다)
+title = 'snow'  정답정답
+'snow' =  title 에러에러입니다
+title변수가 'snow'문자데이터값을 할당=대입
+
+title = 'snow'  정답정답
+print(title) 
+title = 'summer'  
+print(title)
+
+실습2] 여러분 안내문 이름,나이  변수에 할당해서 출력, 변수이름 첫글자는 소문자 권장
+>>> name = '홍길동'
+>>> age = 27
+>>> print(name)
+>>> print(age)
+>>> print('이름:' ,name)
+>>> print('나이:', age)
+
+
+변수에 대한 내용을 조금만 실습
+>>> print("kor=90")
+>>> print("eng=85")
+>>> print("총점=175")
+
+실습3] 국어,영어,총점 각각 출력, 추가로 더하기 연산  국어점수+영수점수
+>>> kor = 90
+>>> eng = 85
+>>> total = 0
+>>> total = kor + eng
+>>> print("국어=", kor)
+>>> print("영어=", eng)
+>>> print("총점=", total)
+>>> print("총점=", (kor+eng))
+
+추가항목] 평균처리 
+>>> avg = total/2
+>>> avg = (kor+eng)/2
+>>> print("평균=", avg)
+     평균= 87.5 결과출력
+>>> avg = kor+eng/2  #틀린문법은 아니지만 결과가 이상하게 출력됨 
+>>> print("평균=", avg)
+     평균= 132.5
+
+kor = 37
+>>> print(type(kor))
+<class 'int'>
+
+>>> avg = 87.5
+>>> print(type(avg))
+ <class 'float'>
+
+>>> gender = False
+>>> print(type(gender))
+ <class 'bool'>   #맞다/틀리다 on/off True/False 불=부울
+
+>>> title = "board"
+>>> print(type(title))
+<class 'str'>  #string=연속적인 의미 
+
+>>> grade = 'B'
+>>> print(type(grade))
+<class 'str'>
+
+5교시 print(), input()이해
+title변수 = "겨울동장군"  고정된 데이터를 키보드에서 입력하고 싶어요
+화면출력 print(title) 
+
+>>> title = 'hehehehehehe'
+>>> title = '' #문자데이터 초기화 권장 
+>>> title = input('계절을 입력하세요 ? ')  
+>>> print( title , '시즌 입니다') 
+     
+>>> title = input('당신 성격 MBTI? ')  
+>>> print( title , '타입이시네요') 
+
+>>> title = input('좋아하는 디저트/과일/커피 입력하세요 ? ')  
+>>> print( title , '선호하는 디저트이군요') 
+
+>>> print(2+3)
+>>> print(7/4) 
+>>> print(7//4)  #정수
+>>> print(7/4) 
+>>> print(19//3) #정수
+>>> print(19/3)
+
+>>> print(7*4) 
+>>> print(7-4) 
+
+>>> print(5*2) 
+>>> print(9*2) 
+>>> print(5**2) 
+>>> print(9**2)
+>>> print(5**3) 
+>>> print(9**3)
+
+>>> print(5*2)
+>>> print('-' * 100) # *의미 반복 
+
+>>> print('★' * 1) 
+>>> print('★' * 2) 
+>>> print('★' * 3) 
+>>> print('★' * 4)
+>>> print('★' * 5) 
+
+실습4] 적절한 변수를 선택하셔서  사칙연산처리 출력 
+>>> x,y = 0,0
+>>> hap,sub,gob,mok,nmg = 0,0,0,0,0
+
+x,y데이터를 키보드에서 입력 해결 
+>>> x = input('첫번째숫자입력? ')
+첫번째숫자입력? 1200
+>>> y = input('두번째숫자입력? ')
+두번째숫자입력? 78
+>>> print(x+y) #input()에서 입력된 데이터는 문자로 인식
+120078  ===>>> 더하기연산은 아직해결못했습니다 
+
+
+번외 개인적으로 실습] 적절한 변수를 선택하셔서  사칙연산처리 출력 
+a=9  x=9  num1=9  data1=9  su1=9
+b=4  y=4  num2=4  data2=4  su2=4
+hap=0  #더하기
+sub=0  #빼기
+gob=0  #곱하기
+mok=0  #나누기 정수몫 2  
+nmg=0  #나머지  9%4=1
+
+hap = (x+y)
+sub = (x-y)
+gob = (x*y)
+mok = (x//y)
+nmgp = (x%y)
+
+5숫자가 있을때  3으로 나눗셈몫
+5/3 = 1 몫  나머지 2
+5%3 = 2 나머지 
+ 
+x = 9
+y = 4
+print(9-4)
+print(x-y)
+
+8교시 예습복습
+
+>>> exit()
+C:~~~~> exit 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+★-------------------------------------------------------------------
+파이썬 언어는 오픈소스 지원, 라이브러리 땡겨와서 여러분 작업어플에 설치해요
+설치할때 명령어 pip install 
+(가상이름)C:\~~~> pip install pandas
+(가상이름)C:\~~~> pip install numpy
+(가상이름)C:\~~~> pip install matplotlib
+(가상이름)C:\~~~> pip install openai
+
+(가상이름)C:\~~~> pip install pandas numpy matplotlib openai 
+(가상이름)C:\~~~> pip list 
+
+(가상이름)C:\~~~> pip freeze > requirements.txt 
+(가상이름)C:\~~~> pip freeze > install.txt
+
+(가상이름)C:\~~~> pip install -r requirements.txt
+
+
+파이썬에서 제어문 if~else
+파이썬에서 예외처리 9/0   9/b
+
+★-------------------------------------------------------------------
+#동아LABai 사이트 주소 mindlogic
+https://donga-ai.factchat.bot/auth
+
+#1번째 파이썬사이트 
+https://www.python.org/
+
+#2번째 파이썬코드를 기술하는 편집 vsCode
+https://code.visualstudio.com/download  
+
+## 파이썬 언어 문법의 주의사항
+1) 대소문자 구별 print()맞음  Print()틀림  
+2) 파이썬은 들여쓰기 잘해야 합니다 
+3) 파이썬 파일 확장자  test.py 
+4) 파이썬 주석처리 # 한줄주석
+5) 파이썬 문자,문자열   'F'  "coffee"  "F"  'coffee'
+6) 파이썬 시작코드는 출력  print('잔액' , 1200, '원')        
+
+윈도우 상태줄 검색입력란 cmd입력  cmd=command명령 터미날
+C:\Users\Donga>
+C:\Users\Donga> python --version
+ Python 3.12.10
+
+
+C:\Users\Donga> python
+Python 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>print(1200)
+ 1200
+>>>print('잔액', 1200)
+ 잔액 1200
+>>>print('잔액', 1200, '원')
+ 잔액 1200 원
+
+>>>print(1200)      #설명주석  숫자
+>>>print(1200+378)  #1578 더하기연산 사칙연산
+>>>print('1200'+'378') #문자로인식 1200378
+>>>print("1200"+"378") #문자로인식 1200378
+
+실습1] 여러분의  나이 출력하세요  27숫자 
+ 홍길동 나이는 27세 입니다 
+>>>print("홍길동 나이는", 27,"세 입니다")
+
+실습2] 
+>>> print('name : gil dong')
+>>> print('age : 27')
+
+실습3]변하는 값을 기억하는 공간이름=변수=variable
+kor = 90   
+eng = 85   
+total = 0
+total = kor + eng
+print(total)
+print('합계=', total)
+>>>exit()
+C:\Users\Donga>exit
+
+AI가 실제 생활이나 업무에서 어떤 일을 대신 도와줄 수 있는지 직접 경험해 보는 활동.
+### ** 평소 귀찮거나 반복되는 일 하나 골라보기**
+- 이메일 답장 쓰기
+- 회의록 정리
+- 블로그 글 초안 만들기
+- 음식 레시피 찾기
+- 오늘 일정 정리
+- 읽기 어려운 기사 요약
+
+
+
+
+#동아LABai 사이트 주소 mindlogic
+https://donga-ai.factchat.bot/auth
+
+#1번째 파이썬사이트 
+https://www.python.org/
+
+#2번째 파이썬코드를 기술하는 편집 vsCode
+https://code.visualstudio.com/download  
+
+#3번째 아나콘다 설치 (가상환경, 유용한 라이브러리)
+https://www.anaconda.com/download/success
+
+
+
+작업폴더
+C:\dongaAI폴더
+ㄴch01
+ㄴday1231 폴더는 지난주 금요일생성
+ㄴday0105stitch 폴더는 어제생성 
+ㄴday0106
+ㄴimages 줌채팅창에 다운로드 하셔서 압축풀기
+
+
+
+#1번째 파이썬사이트 
+https://www.python.org/
+
+#2번째 파이썬코드를 기술하는 편집 vsCode
+https://code.visualstudio.com/download  
+
+## 파이썬 언어 문법의 주의사항
+1) 대소문자 구별 print()맞음  Print()틀림  
+2) 파이썬은 들여쓰기 잘해야 합니다 
+3) 파이썬 파일 확장자  test.py 
+4) 파이썬 주석처리 # 한줄주석
+5) 파이썬 문자,문자열   'F'  "coffee"  "F"  'coffee'
+6) 파이썬 시작코드는 출력  print('잔액' , 1200, '원')        
+
+윈도우 상태줄 검색입력란 cmd입력  cmd=command명령 터미날
+C:\Users\Donga>
+C:\Users\Donga> python --version
+ Python 3.12.10
+
+
+C:\Users\Donga> python
+Python 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>print(1200)
+ 1200
+>>>print('잔액', 1200)
+ 잔액 1200
+>>>print('잔액', 1200, '원')
+ 잔액 1200 원
+
+>>>print(1200)      #설명주석  숫자
+>>>print(1200+378)  #1578 더하기연산 사칙연산
+>>>print('1200'+'378') #문자로인식 1200378
+>>>print("1200"+"378") #문자로인식 1200378
+
+실습1] 여러분의  나이 출력하세요  27숫자 
+ 홍길동 나이는 27세 입니다 
+>>>print("홍길동 나이는", 27,"세 입니다")
+
+실습2] 
+>>> print('name : gil dong')
+>>> print('age : 27')
+
+실습3]변하는 값을 기억하는 공간이름=변수=variable
+kor = 90   
+eng = 85   
+total = 0
+total = kor + eng
+print(total)
+print('합계=', total)
+>>>exit()
+C:\Users\Donga>exit
+
+AI가 실제 생활이나 업무에서 어떤 일을 대신 도와줄 수 있는지 직접 경험해 보는 활동.
+### ** 평소 귀찮거나 반복되는 일 하나 골라보기**
+- 이메일 답장 쓰기
+- 회의록 정리
+- 블로그 글 초안 만들기
+- 음식 레시피 찾기
+- 오늘 일정 정리
+- 읽기 어려운 기사 요약
+
+
+
+
+
+
+
+번외환경설정]
+시스템 환경 변수 편집
+환경변수 클릭  위쪽에 있는 path클릭 편집버튼클릭 
+오른쪽에서 새로만들기  
+C:\Users\Donga\AppData\Local\Programs\Python\Python312 복사붙여넣기 
+
+*-----------------------------------------------------------------
+#3번째 아나콘다 설치 (가상환경, 유용한 라이브러리)
+https://www.anaconda.com/download/success
+
+
+
+#5번째 생성형 AI로 자동 프리젠테이션 만들기(아래 실습1, 실습2 참고하세요)
+https://www.canva.com/ko_kr/
+https://gamma.app
+https://gamma.app
+주제입력을  "AI 리터러시의 개념과 세대별 인공지능 발전 흐름을 요약한 발표자료를 만들어줘" 
+
+#6번째 firebase 유료화정책
+https://studio.firebase.google.com/
+https://firebase.studio/
+테트리스 간단한 게임 만들어줘 
+instagram 가입화면 만들어줘
+
+#7번째 aistudio 유료화정책 
+https://aistudio.google.com/
+
+엄균호 님
+이종국 님
+서영    님
+
+
+
+#오후 1시간 ~ 2시간 파이썬
+1월8일 목요일에 똑같이 진행 
+
+#사이트 ai미디어제공(이미지,동영상,소리)
+https://labs.google/fx/ko/tools/image-fx
+https://gemini.google.com/
+https://runwayml.com/
+https://labs.google.com/mixboard
+https://stitch.withgoogle.com/
+
+
+
+
+작업폴더
+C:\dongaAI폴더
+ㄴch0
+ㄴday1231 폴더
+ㄴday0105stitch 폴더생성 ===>>> 여기서 2개문서만 새로작성
+   vsCode실행후  File => Opn Foder  ==>  day0105stitch
+
+
+#파이썬코드를 기술하는 편집 vsCode
+https://code.visualstudio.com/download  
+
+
+
+
+왼쪽 스튜디오 항목에서 챗봇만들기 
+ㄴ여러분의 관심사항 : 금융, 부동산, 게임, 음악, 뷰티, 교육, 문화재, 운동, 내부lms회의 
+  
+
+
+*------------------------------------------------------------------
+*------------------------------------------------------------------
+#1번째 파이썬사이트 
+https://www.python.org/
+
+#2번째 파이썬코드를 기술하는 편집 vsCode
+https://code.visualstudio.com/download  
+
+#3번째 아나콘다 설치 (가상환경, 유용한 라이브러리)
+https://www.anaconda.com/download/success
+
+작업폴더
+C:\dongaAI폴더
+ㄴch01
+ㄴday1231 작업폴더로 사용 
+
+#4번째 파이썬 규칙 
+ㄴ대소문자구별 print()맞음  
+ㄴ들여쓰기 적용 (제어if,반복문,함수에서 많이 사용)
+ㄴ화면출력 print(),  키보드입력input("나이입력")
+ㄴ문자열/문자  "F"   'F' 
+ㄴ코드주석 #code코드주석설명 
+
+
+
+★----------------------------------------------------------------------
+https://www.aihub.or.kr
+https://kosis.kr/index/index.do
+https://data.go.kr
+https://streamlit.io ===>>> 파이썬 + LLM서비스 
+https://www.ultralytics.com
+ 
+
+
+
+
+
